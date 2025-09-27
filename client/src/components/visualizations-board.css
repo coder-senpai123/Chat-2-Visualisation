@@ -1,0 +1,55 @@
+:root {
+    --viz-column-width: 420px;
+    --viz-card-width: 320px;
+    --muted: #9fb0c8;
+    --card-bg-start: #0f1a28;
+    --card-bg-end: #071023;
+  }
+  
+  .viz-board-wrap {
+    padding: 12px;
+    max-width: var(--viz-column-width); 
+    box-sizing: border-box;
+  }
+  
+  .viz-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .viz-card {
+    width: var(--viz-card-width);
+    min-width: var(--viz-card-width);
+    margin-bottom: 14px;
+    background: linear-gradient(180deg, var(--card-bg-start), var(--card-bg-end));
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(2,6,23,0.55);
+    border: 1px solid rgba(255,255,255,0.03);
+  }
+  
+  .viz-card-canvas {
+    min-height: 180px;
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  }
+  
+  .viz-card-body {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #dbeafe;
+    max-height: 96px;
+    overflow: auto;
+  }
+  
+  .button.small { padding: 6px 8px; font-size: 13px; border-radius: 8px; }
+  @media (max-width: 980px) {
+    .viz-card { width: 280px; min-width: 280px; }
+    .viz-board-wrap { max-width: 100%; }
+  }
+  
